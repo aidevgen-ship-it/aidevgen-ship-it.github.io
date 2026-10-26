@@ -3,24 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - Contacts & Dialer</title>
+    <title>Privacy Policy - Smart Dialer &amp; Phone Contacts | DevGen AI Inc</title>
     <style>
         :root {
             --primary: #0284C7;
+            --primary-dark: #0369A1;
             --bg: #F8FAFC;
             --card-bg: #FFFFFF;
             --text-main: #0F172A;
             --text-muted: #475569;
             --border: #E2E8F0;
+            --badge-bg: #E0F2FE;
+            --badge-text: #0369A1;
         }
         @media (prefers-color-scheme: dark) {
             :root {
                 --primary: #38BDF8;
+                --primary-dark: #0284C7;
                 --bg: #0F172A;
                 --card-bg: #1E293B;
                 --text-main: #F8FAFC;
                 --text-muted: #94A3B8;
                 --border: #334155;
+                --badge-bg: #0C4A6E;
+                --badge-text: #BAE6FD;
             }
         }
         * {
@@ -33,37 +39,76 @@
             background-color: var(--bg);
             color: var(--text-main);
             line-height: 1.7;
-            padding: 24px 16px;
+            padding: 32px 16px;
         }
         .container {
-            max-width: 800px;
+            max-width: 820px;
             margin: 0 auto;
             background: var(--card-bg);
             padding: 40px;
             border-radius: 16px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
             border: 1px solid var(--border);
         }
-        h1 {
-            font-size: 28px;
-            color: var(--primary);
-            margin-bottom: 8px;
+        .header {
+            margin-bottom: 24px;
         }
-        .meta {
-            color: var(--text-muted);
+        h1 {
+            font-size: 30px;
+            color: var(--primary);
+            margin-bottom: 12px;
+            font-weight: 800;
+        }
+        .meta-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 12px;
+            padding: 16px;
+            background: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            margin-bottom: 24px;
             font-size: 14px;
-            margin-bottom: 28px;
-            padding-bottom: 16px;
-            border-bottom: 1px solid var(--border);
+        }
+        .meta-item {
+            color: var(--text-muted);
+        }
+        .meta-item strong {
+            color: var(--text-main);
+            display: block;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 2px;
+        }
+        .highlight-box {
+            background: var(--badge-bg);
+            border-left: 4px solid var(--primary);
+            padding: 16px 20px;
+            border-radius: 0 10px 10px 0;
+            margin: 24px 0;
+            color: var(--text-main);
+        }
+        .highlight-box p {
+            margin-bottom: 0;
+            font-weight: 500;
         }
         h2 {
-            font-size: 20px;
-            margin-top: 28px;
+            font-size: 21px;
+            margin-top: 32px;
             margin-bottom: 12px;
+            color: var(--text-main);
+            padding-bottom: 6px;
+            border-bottom: 1px solid var(--border);
+        }
+        h3 {
+            font-size: 16px;
+            margin-top: 18px;
+            margin-bottom: 8px;
             color: var(--text-main);
         }
         p, ul {
-            margin-bottom: 16px;
+            margin-bottom: 14px;
             color: var(--text-muted);
         }
         ul {
@@ -75,87 +120,123 @@
         strong {
             color: var(--text-main);
         }
-        .highlight-box {
-            background: rgba(2, 132, 199, 0.08);
-            border-left: 4px solid var(--primary);
-            padding: 16px;
-            border-radius: 0 8px 8px 0;
-            margin: 20px 0;
-        }
-        .highlight-box p {
-            margin-bottom: 0;
-            color: var(--text-main);
+        code {
+            background: var(--bg);
+            padding: 2px 6px;
+            border-radius: 4px;
+            border: 1px solid var(--border);
+            font-size: 13px;
         }
         a {
             color: var(--primary);
             text-decoration: none;
+            font-weight: 500;
         }
         a:hover {
             text-decoration: underline;
+        }
+        .contact-card {
+            background: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 20px;
+            margin-top: 16px;
+        }
+        .contact-card p {
+            margin-bottom: 6px;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Privacy Policy</h1>
-        <div class="meta">
-            <strong>App Name:</strong> Contacts &amp; Dialer &bull; 
-            <strong>Last Updated:</strong> October 2026
+        <div class="header">
+            <h1>Privacy Policy</h1>
+            <div class="meta-grid">
+                <div class="meta-item">
+                    <strong>Application Name</strong>
+                    Smart Dialer &amp; Phone Contacts
+                </div>
+                <div class="meta-item">
+                    <strong>Developer / Publisher</strong>
+                    DevGen AI Inc
+                </div>
+                <div class="meta-item">
+                    <strong>Package Name</strong>
+                    <code>com.phone.contacts.dialer.call</code>
+                </div>
+                <div class="meta-item">
+                    <strong>Last Updated</strong>
+                    October 2026
+                </div>
+            </div>
         </div>
 
         <div class="highlight-box">
-            <p><strong>Summary:</strong> Contacts &amp; Dialer processes your contacts and call logs exclusively on your device to provide dialer, caller ID, and call management functionality. We <strong>do not</strong> collect, upload, share, or sell your personal contacts, phone numbers, or call logs to any external server.</p>
+            <p><strong>Core Privacy Guarantee:</strong> Smart Dialer &amp; Phone Contacts processes your address book, contacts, and call history <strong>exclusively on your physical device</strong>. DevGen AI Inc does not collect, transmit, store on cloud servers, or share your personal contacts or call logs with any third parties.</p>
         </div>
 
-        <h2>1. Introduction</h2>
-        <p>This Privacy Policy describes how <strong>Contacts &amp; Dialer</strong> ("we", "our", or "the app") collects, uses, and safeguards your information when you use our Android mobile application.</p>
-        <p>By using Contacts &amp; Dialer, you agree to the collection and use of information in accordance with this policy.</p>
+        <h2>1. Introduction &amp; Developer Identity</h2>
+        <p>This Privacy Policy is issued by <strong>DevGen AI Inc</strong> ("we", "us", or "our"), the official developer and legal entity responsible for the Android mobile application <strong>Smart Dialer &amp; Phone Contacts</strong> (Package ID: <code>com.phone.contacts.dialer.call</code>), published on Google Play.</p>
+        <p>We respect your privacy and provide this policy to explain our on-device data processing, permissions required for telephony and contact management, and third-party advertising disclosures.</p>
 
-        <h2>2. Permissions and Data We Access</h2>
-        <p>To operate as a full-featured default phone dialer and address book, the app requests access to the following sensitive permissions:</p>
-        <ul>
-            <li><strong>Contacts (READ_CONTACTS, WRITE_CONTACTS):</strong> Needed to display your address book, search contacts, add/edit/delete contacts, and display caller names during incoming and outgoing calls. All contact data stays strictly on your physical device.</li>
-            <li><strong>Call Logs (READ_CALL_LOG, WRITE_CALL_LOG):</strong> Required to show your call history (incoming, outgoing, and missed calls) in the Recents tab, allow you to clear call entries, and redial recent contacts.</li>
-            <li><strong>Phone &amp; Calling (CALL_PHONE, READ_PHONE_STATE, MANAGE_OWN_CALLS):</strong> Essential to make phone calls directly from keypad/contacts, detect incoming calls, manage in-call states (mute, speaker, hold), and function as the Default Phone Handler.</li>
-            <li><strong>Microphone (RECORD_AUDIO):</strong> Used solely when you tap the voice search icon to find contacts hands-free. Audio is processed transiently and is never recorded or stored.</li>
-            <li><strong>Notifications (POST_NOTIFICATIONS):</strong> Used to alert you of incoming calls, ongoing call status, and missed call notifications.</li>
-        </ul>
+        <h2>2. Sensitive Permissions &amp; Data Access</h2>
+        <p>To operate as a Default Phone Handler and contact manager, Smart Dialer &amp; Phone Contacts requests access to the following Android runtime permissions:</p>
+        
+        <h3>A. Contacts (<code>READ_CONTACTS</code>, <code>WRITE_CONTACTS</code>)</h3>
+        <p>Required to display your address book, search contacts, add/edit/delete contacts, and identify callers during incoming and outgoing calls. All contact data stays strictly on your physical device and is never uploaded to external servers.</p>
 
-        <h2>3. Data Usage &amp; On-Device Processing</h2>
-        <p>We believe strongly in user privacy:</p>
+        <h3>B. Call Logs (<code>READ_CALL_LOG</code>, <code>WRITE_CALL_LOG</code>)</h3>
+        <p>Required to show your incoming, outgoing, and missed call history in the Recents tab and allow you to manage call records. Stored strictly in your device's native system call log.</p>
+
+        <h3>C. Phone &amp; Calling (<code>CALL_PHONE</code>, <code>READ_PHONE_STATE</code>, <code>MANAGE_OWN_CALLS</code>)</h3>
+        <p>Essential to place phone calls directly from keypad and contacts, detect incoming phone calls, control in-call states (speaker, mute, hold), and serve as the Default Dialer on Android.</p>
+
+        <h3>D. Microphone (<code>RECORD_AUDIO</code>)</h3>
+        <p>Used strictly when you tap the voice search icon to search contacts hands-free. Audio is processed transiently on-device and is never recorded, stored, or transmitted.</p>
+
+        <h3>E. Notifications (<code>POST_NOTIFICATIONS</code>)</h3>
+        <p>Used to provide incoming call heads-up notifications, ongoing call notifications, and missed call alerts.</p>
+
+        <h2>3. Data Usage &amp; On-Device Privacy Architecture</h2>
         <ul>
-            <li><strong>No Cloud Upload of Personal Data:</strong> Your phonebook, contact details, and call history are never uploaded to any remote server or database operated by us.</li>
-            <li><strong>No Selling of Personal Data:</strong> We never sell, rent, monetize, or broker your personal information, phone numbers, or calling history to data brokers or third parties.</li>
-            <li><strong>App Vault &amp; Private Storage:</strong> Private contacts locked inside the App Vault are stored locally on your device in secure app storage protected by your chosen PIN.</li>
+            <li><strong>Zero Cloud Upload of Personal Data:</strong> Your contacts, phone numbers, and call logs NEVER leave your physical device. DevGen AI Inc does not maintain servers that store your address book or call logs.</li>
+            <li><strong>Zero Data Selling:</strong> We never sell, rent, monetize, or disclose your personal contacts, phone numbers, or calling history to data brokers or third parties.</li>
+            <li><strong>Local Vault:</strong> Contacts placed in the App Vault are encrypted and stored solely in secure app storage on your device, protected by your custom PIN.</li>
         </ul>
 
         <h2>4. Third-Party Services &amp; Advertising</h2>
-        <p>The app may display advertisements and use analytics to support ongoing maintenance. These third-party providers may collect non-personal diagnostic and advertising data:</p>
+        <p>The app integrates reputable third-party SDKs to support app development and maintenance:</p>
         <ul>
-            <li><strong>Google AdMob:</strong> Uses device identifiers (such as Android Advertising ID), IP address, and app usage metrics to serve banner and interstitial ads according to <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>.</li>
-            <li><strong>Firebase Remote Config:</strong> Used to deliver non-personal configuration settings (such as ad frequencies and feature toggles).</li>
+            <li><strong>Google AdMob:</strong> Serves ads. Google AdMob may collect pseudonymous identifiers such as Google Advertising ID and device diagnostic information to deliver relevant ads in accordance with <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>. AdMob does not have access to your personal contacts or call logs.</li>
+            <li><strong>Firebase Remote Config:</strong> Delivers non-personal configuration values, ad display rules, and performance updates.</li>
         </ul>
 
-        <h2>5. Data Retention &amp; User Control</h2>
-        <p>All contact and call log data resides on your device's native SQLite storage managed by the Android operating system. You retain complete control:</p>
+        <h2>5. Data Retention &amp; User Data Deletion Rights</h2>
+        <p>Because your personal data resides on your device:</p>
         <ul>
-            <li>You can view, edit, or delete contacts and call records at any time directly in the app.</li>
-            <li>You can revoke permissions at any time via Android System Settings &gt; Apps &gt; Contacts &amp; Dialer &gt; Permissions.</li>
-            <li>Uninstalling the app immediately removes all app-specific caches, settings, and vault data.</li>
+            <li><strong>Direct Control:</strong> You can view, modify, or delete contacts and call records at any time within the application.</li>
+            <li><strong>Permission Revocation:</strong> You can revoke any permission granted to the app at any time via Android System Settings &gt; Apps &gt; Smart Dialer &amp; Phone Contacts &gt; Permissions.</li>
+            <li><strong>Instant Data Removal:</strong> Uninstalling the application completely erases all local caches, settings, and Vault contacts from your device.</li>
+            <li><strong>Deletion Requests:</strong> Since DevGen AI Inc does not collect or store your personal communications data on remote servers, no server-side retention exists. For any data or privacy inquiries, contact us directly at <a href="mailto:aidevgen@gmail.com">aidevgen@gmail.com</a>.</li>
         </ul>
 
         <h2>6. Children's Privacy</h2>
-        <p>Contacts &amp; Dialer is not directed to individuals under the age of 13. We do not knowingly collect personal identifiable information from children.</p>
+        <p>Smart Dialer &amp; Phone Contacts is not directed to children under 13 years of age. We do not knowingly collect personal information from children.</p>
 
         <h2>7. Security</h2>
-        <p>We value your trust in providing us your information, and we take commercially reasonable measures to protect it. Since all core data remains stored strictly on your device, it is secured by your device's operating system security and encryption.</p>
+        <p>We value your trust. All core app operations run locally on your device and benefit from the Android operating system's security architecture, sandbox isolation, and device encryption.</p>
 
-        <h2>8. Changes to This Privacy Policy</h2>
-        <p>We may update our Privacy Policy periodically. You are advised to review this page periodically for any changes. Any updates will be posted here with an updated "Last Updated" date.</p>
+        <h2>8. Policy Updates</h2>
+        <p>DevGen AI Inc may update this Privacy Policy periodically. Any changes will be posted on this page with an updated "Last Updated" date.</p>
 
         <h2>9. Contact Us</h2>
-        <p>If you have any questions or suggestions regarding our Privacy Policy, do not hesitate to contact us at:</p>
-        <p><strong>Email:</strong> <a href="mailto:aidevgen@gmail.com">aidevgen@gmail.com</a></p>
+        <p>If you have any questions, feedback, or concerns regarding this Privacy Policy or the practices of Smart Dialer &amp; Phone Contacts, please contact:</p>
+        <div class="contact-card">
+            <p><strong>Developer / Legal Entity:</strong> DevGen AI Inc</p>
+            <p><strong>Application:</strong> Smart Dialer &amp; Phone Contacts</p>
+            <p><strong>Package ID:</strong> <code>com.phone.contacts.dialer.call</code></p>
+            <p><strong>Email:</strong> <a href="mailto:aidevgen@gmail.com">aidevgen@gmail.com</a></p>
+        </div>
     </div>
 </body>
 </html>
