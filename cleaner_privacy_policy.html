@@ -8,13 +8,15 @@
         :root {
             --primary: #0F6EFC;
             --primary-dark: #094db5;
-            --text-dark: #1e293b;
+            --text-dark: #0f172a;
             --text-muted: #64748b;
             --bg-light: #f8fafc;
             --card-bg: #ffffff;
             --border: #e2e8f0;
             --tag-bg: #eff6ff;
             --tag-text: #1d4ed8;
+            --meta-box-bg: #f0f7fd;
+            --title-color: #0c2340;
         }
 
         * {
@@ -28,62 +30,79 @@
             background-color: var(--bg-light);
             color: var(--text-dark);
             line-height: 1.7;
-            padding: 20px;
+            padding: 30px 20px;
         }
 
         .container {
             max-width: 860px;
-            margin: 30px auto;
+            margin: 0 auto;
             background: var(--card-bg);
             border-radius: 16px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 4px 25px rgba(0, 0, 0, 0.05);
             border: 1px solid var(--border);
-            overflow: hidden;
+            padding: 40px 45px;
         }
 
-        .header {
-            background: linear-gradient(135deg, #13ADFC 0%, #0F6EFC 100%);
-            color: #ffffff;
-            padding: 40px 35px;
-            text-align: center;
+        .main-title {
+            font-size: 34px;
+            font-weight: 800;
+            color: var(--title-color);
+            margin-bottom: 22px;
+            letter-spacing: -0.5px;
         }
 
-        .header h1 {
-            font-size: 28px;
-            font-weight: 700;
-            margin-bottom: 8px;
+        /* Exact Meta Box Design from user reference */
+        .meta-box {
+            background-color: var(--meta-box-bg);
+            border-radius: 16px;
+            padding: 22px 26px;
+            margin-bottom: 30px;
         }
 
-        .header p {
+        .meta-box p {
+            margin: 0 0 10px 0;
             font-size: 15px;
-            opacity: 0.9;
+            color: #1e293b;
+            line-height: 1.5;
         }
 
-        .meta-badge {
-            display: inline-block;
-            margin-top: 15px;
-            background: rgba(255, 255, 255, 0.2);
-            backdrop-filter: blur(8px);
-            padding: 6px 14px;
-            border-radius: 20px;
-            font-size: 13px;
+        .meta-box p:last-child {
+            margin-bottom: 0;
+        }
+
+        .meta-box strong {
+            color: #0c2340;
+            font-weight: 700;
+        }
+
+        .meta-box a {
+            color: #0284c7;
+            text-decoration: underline;
             font-weight: 500;
         }
 
-        .content {
-            padding: 35px;
+        .meta-box a:hover {
+            color: #0369a1;
         }
 
         h2 {
-            color: var(--text-dark);
-            font-size: 20px;
-            font-weight: 600;
-            margin-top: 30px;
-            margin-bottom: 12px;
+            color: var(--title-color);
+            font-size: 21px;
+            font-weight: 700;
+            margin-top: 34px;
+            margin-bottom: 14px;
             display: flex;
             align-items: center;
             border-bottom: 2px solid #f1f5f9;
             padding-bottom: 8px;
+        }
+
+        h3 {
+            font-size: 16.5px;
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-top: 18px;
+            margin-bottom: 10px;
         }
 
         p {
@@ -107,7 +126,7 @@
             border-left: 4px solid var(--primary);
             padding: 16px 20px;
             border-radius: 0 10px 10px 0;
-            margin: 20px 0;
+            margin: 22px 0;
         }
 
         .highlight-box strong {
@@ -117,8 +136,8 @@
         .permission-card {
             background: #f8fafc;
             border: 1px solid var(--border);
-            border-radius: 10px;
-            padding: 14px 18px;
+            border-radius: 12px;
+            padding: 16px 20px;
             margin-bottom: 12px;
         }
 
@@ -126,7 +145,7 @@
             font-weight: 600;
             color: var(--primary-dark);
             margin-bottom: 4px;
-            font-size: 14px;
+            font-size: 14.5px;
         }
 
         .permission-desc {
@@ -146,23 +165,27 @@
         }
 
         .footer {
-            background-color: #f8fafc;
             border-top: 1px solid var(--border);
-            padding: 24px;
+            margin-top: 40px;
+            padding-top: 24px;
             text-align: center;
             color: var(--text-muted);
-            font-size: 13px;
+            font-size: 13.5px;
         }
 
-        @media (max-width: 600px) {
-            .content {
-                padding: 22px;
+        @media (max-width: 650px) {
+            body {
+                padding: 15px 10px;
             }
-            .header {
-                padding: 30px 20px;
+            .container {
+                padding: 24px 18px;
+                border-radius: 12px;
             }
-            .header h1 {
-                font-size: 22px;
+            .main-title {
+                font-size: 26px;
+            }
+            .meta-box {
+                padding: 18px 20px;
             }
         }
     </style>
@@ -170,108 +193,112 @@
 <body>
 
 <div class="container">
-    <div class="header">
-        <h1>Privacy Policy</h1>
-        <p>Phone Cleaner: Storage & Junk Cleaner</p>
-        <span class="meta-badge">Package: com.phonecleaner.storagecleaner.junkcleaner</span>
+    <h1 class="main-title">Privacy Policy</h1>
+
+    <!-- App & Developer Meta Card (Matches provided reference) -->
+    <div class="meta-box">
+        <p><strong>Application:</strong> Phone Cleaner: Storage & Junk Cleaner</p>
+        <p><strong>Package Name:</strong> com.phonecleaner.storagecleaner.junkcleaner</p>
+        <p><strong>Developer:</strong> DevGen Ai Inc</p>
+        <p><strong>Contact Email:</strong> <a href="mailto:support@kmsteams.com">support@kmsteams.com</a></p>
+        <p><strong>Last Updated:</strong> November 24, 2026</p>
     </div>
 
-    <div class="content">
-        <p><strong>Effective Date:</strong> November 24, 2026</p>
-        <p><strong>Last Updated:</strong> November 24, 2026</p>
+    <p>Welcome to <strong>Phone Cleaner: Storage & Junk Cleaner</strong> ("we", "our", or "us"), developed by <strong>DevGen Ai Inc</strong>. We are committed to protecting and respecting your privacy. This Privacy Policy explains how our application operates, what permissions we require, how on-device data is processed, and our commitment to transparency.</p>
 
-        <p>Welcome to <strong>Phone Cleaner: Storage & Junk Cleaner</strong> ("we", "our", or "us"). We are committed to protecting and respecting your privacy. This Privacy Policy explains how our application operates, what permissions we require, how on-device data is processed, and our commitment to transparency.</p>
+    <div class="highlight-box">
+        <strong>Key Privacy Guarantee:</strong>
+        <p style="margin: 6px 0 0 0; color: #1e3a8a;">
+            All file scanning, junk cleaning, duplicate file finding, and image compression activities take place <strong>100% locally on your device</strong>. We do not transfer, upload, or store your private files, photos, videos, or documents to any external server.
+        </p>
+    </div>
 
-        <div class="highlight-box">
-            <strong>Key Privacy Guarantee:</strong>
-            <p style="margin: 6px 0 0 0; color: #1e3a8a;">
-                All file scanning, junk cleaning, duplicate file finding, and image compression activities take place <strong>100% locally on your device</strong>. We do not transfer, upload, or store your private files, photos, videos, or documents to any external server.
-            </p>
-        </div>
+    <h2>1. Information We Collect and Process</h2>
+    <p>We believe in absolute data minimization. Our application does not require user accounts, registration, or collection of personally identifiable information (PII) such as your name, physical address, email address, phone number, or contacts.</p>
 
-        <h2>1. Information We Collect and Process</h2>
-        <p>We believe in absolute data minimization. Our application does not require user accounts, registration, or collection of personally identifiable information (PII) such as your name, physical address, email address, phone number, or contacts.</p>
+    <h3>A. Device Information Processed Locally:</h3>
+    <ul>
+        <li><strong>Storage & File Data:</strong> Scans temporary cache files, obsolete APKs, empty folders, and duplicate files to calculate storage savings and facilitate user-approved deletions.</li>
+        <li><strong>Installed Applications:</strong> Reads installed application names, package names, and app sizes to power the built-in App Manager and memory cleaner.</li>
+        <li><strong>Hardware & Battery Statistics:</strong> Reads battery level, charging status, temperature, RAM usage, and CPU core details strictly to display real-time device health to you.</li>
+    </ul>
 
-        <h3>A. Device Information Processed Locally:</h3>
-        <ul>
-            <li><strong>Storage & File Data:</strong> Scans temporary cache files, obsolete APKs, empty folders, and duplicate files to calculate storage savings and facilitate user-approved deletions.</li>
-            <li><strong>Installed Applications:</strong> Reads installed application names, package names, and app sizes to power the built-in App Manager and memory cleaner.</li>
-            <li><strong>Hardware & Battery Statistics:</strong> Reads battery level, charging status, temperature, RAM usage, and CPU core details strictly to display real-time device health to you.</li>
-        </ul>
+    <h2>2. Android Permissions We Request & Why</h2>
+    <p>To deliver core device management and optimization features, our application requests the following Android permissions in full adherence to Google Play Developer Policies:</p>
 
-        <h2>2. Android Permissions We Request & Why</h2>
-        <p>To deliver core device management and optimization features, our application requests the following Android permissions in full adherence to Google Play Developer Policies:</p>
+    <div class="permission-card">
+        <div class="permission-title">All Files Access (MANAGE_EXTERNAL_STORAGE)</div>
+        <p class="permission-desc">Required on Android 11 (API 30) and above for core device cleaning capabilities: scanning junk cache across system directories, identifying duplicate files across storage partitions, and deleting user-selected files.</p>
+    </div>
 
-        <div class="permission-card">
-            <div class="permission-title">All Files Access (MANAGE_EXTERNAL_STORAGE)</div>
-            <p class="permission-desc">Required on Android 11 (API 30) and above for core device cleaning capabilities: scanning junk cache across system directories, identifying duplicate files across storage partitions, and deleting user-selected files.</p>
-        </div>
+    <div class="permission-card">
+        <div class="permission-title">Read & Write External Storage (READ/WRITE_EXTERNAL_STORAGE)</div>
+        <p class="permission-desc">Required on devices running Android 10 and older to enable file scanning, junk removal, duplicate file identification, and saving compressed images.</p>
+    </div>
 
-        <div class="permission-card">
-            <div class="permission-title">Read & Write External Storage (READ/WRITE_EXTERNAL_STORAGE)</div>
-            <p class="permission-desc">Required on devices running Android 10 and older to enable file scanning, junk removal, duplicate file identification, and saving compressed images.</p>
-        </div>
+    <div class="permission-card">
+        <div class="permission-title">Query All Packages (QUERY_ALL_PACKAGES)</div>
+        <p class="permission-desc">Required for the <strong>App Manager</strong> and <strong>RAM Booster</strong> features to inspect installed apps, display their storage footprint, and allow users to uninstall or manage unwanted apps.</p>
+    </div>
 
-        <div class="permission-card">
-            <div class="permission-title">Query All Packages (QUERY_ALL_PACKAGES)</div>
-            <p class="permission-desc">Required for the <strong>App Manager</strong> and <strong>RAM Booster</strong> features to inspect installed apps, display their storage footprint, and allow users to uninstall or manage unwanted apps.</p>
-        </div>
+    <div class="permission-card">
+        <div class="permission-title">Kill Background Processes (KILL_BACKGROUND_PROCESSES)</div>
+        <p class="permission-desc">Used exclusively by the <strong>RAM Booster</strong> feature to terminate idle background tasks and reclaim free system memory upon explicit user action.</p>
+    </div>
 
-        <div class="permission-card">
-            <div class="permission-title">Kill Background Processes (KILL_BACKGROUND_PROCESSES)</div>
-            <p class="permission-desc">Used exclusively by the <strong>RAM Booster</strong> feature to terminate idle background tasks and reclaim free system memory upon explicit user action.</p>
-        </div>
+    <div class="permission-card">
+        <div class="permission-title">Internet & Network State (INTERNET, ACCESS_NETWORK_STATE)</div>
+        <p class="permission-desc">Required solely for network connectivity to serve advertisements (Google AdMob), deliver remote app configurations (Firebase Remote Config), and record anonymous crash reports (Firebase Crashlytics).</p>
+    </div>
 
-        <div class="permission-card">
-            <div class="permission-title">Internet & Network State (INTERNET, ACCESS_NETWORK_STATE)</div>
-            <p class="permission-desc">Required solely for network connectivity to serve advertisements (Google AdMob), deliver remote app configurations (Firebase Remote Config), and record anonymous crash reports (Firebase Crashlytics).</p>
-        </div>
+    <h2>3. Third-Party Services and Advertising</h2>
+    <p>To keep this application free of charge, we partner with trusted third-party service providers. These services may collect pseudonymous device identifiers (such as Android Advertising ID or IP address) in accordance with their respective privacy policies:</p>
 
-        <h2>3. Third-Party Services and Advertising</h2>
-        <p>To keep this application free of charge, we partner with trusted third-party service providers. These services may collect pseudonymous device identifiers (such as Android Advertising ID or IP address) in accordance with their respective privacy policies:</p>
+    <ul>
+        <li>
+            <strong>Google AdMob:</strong> Serves banner, interstitial, and app-open advertisements.
+            <br>Privacy Policy: <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">https://policies.google.com/technologies/ads</a>
+        </li>
+        <li>
+            <strong>Google Play Services:</strong> Powers essential app infrastructure and in-app updates.
+            <br>Privacy Policy: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">https://policies.google.com/privacy</a>
+        </li>
+        <li>
+            <strong>Firebase Crashlytics & Remote Config:</strong> Analyzes app crashes, performance diagnostics, and dynamic feature configurations.
+            <br>Privacy Policy: <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">https://firebase.google.com/support/privacy</a>
+        </li>
+    </ul>
 
-        <ul>
-            <li>
-                <strong>Google AdMob:</strong> Serves banner, interstitial, and app-open advertisements.
-                <br>Privacy Policy: <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">https://policies.google.com/technologies/ads</a>
-            </li>
-            <li>
-                <strong>Google Play Services:</strong> Powers essential app infrastructure and in-app updates.
-                <br>Privacy Policy: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">https://policies.google.com/privacy</a>
-            </li>
-            <li>
-                <strong>Firebase Crashlytics & Remote Config:</strong> Analyzes app crashes, performance diagnostics, and dynamic feature configurations.
-                <br>Privacy Policy: <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">https://firebase.google.com/support/privacy</a>
-            </li>
-        </ul>
+    <h2>4. Data Retention and Security</h2>
+    <p>Because file analysis and cleaning operations are executed locally on your device hardware, we do not maintain external databases containing your files or device state. When you delete files or uninstall apps using our tools, those actions are performed directly on your local Android file system and are irreversible.</p>
 
-        <h2>4. Data Retention and Security</h2>
-        <p>Because file analysis and cleaning operations are executed locally on your device hardware, we do not maintain external databases containing your files or device state. When you delete files or uninstall apps using our tools, those actions are performed directly on your local Android file system and are irreversible.</p>
+    <h2>5. Children's Privacy (COPPA Compliance)</h2>
+    <p>Our application is not targeted towards or intended for use by children under the age of 13 (or under 16 in the European Economic Area). We do not knowingly collect personal information from children. If you believe a child has provided us with personal information, please contact us immediately so we can promptly address the issue.</p>
 
-        <h2>5. Children's Privacy (COPPA Compliance)</h2>
-        <p>Our application is not targeted towards or intended for use by children under the age of 13 (or under 16 in the European Economic Area). We do not knowingly collect personal information from children. If you believe a child has provided us with personal information, please contact us immediately so we can promptly address the issue.</p>
+    <h2>6. GDPR and CCPA / CPRA Rights</h2>
+    <p>Depending on your location (such as the European Economic Area or California), you may have certain legal rights regarding your data:</p>
+    <ul>
+        <li>The right to opt out of personalized advertisements (configurable directly in your device's <em>Google Settings &gt; Ads</em>).</li>
+        <li>The right to know what personal data is processed by third-party advertising networks.</li>
+        <li>The right to request data deletion where applicable.</li>
+    </ul>
 
-        <h2>6. GDPR and CCPA / CPRA Rights</h2>
-        <p>Depending on your location (such as the European Economic Area or California), you may have certain legal rights regarding your data:</p>
-        <ul>
-            <li>The right to opt out of personalized advertisements (configurable directly in your device's <em>Google Settings &gt; Ads</em>).</li>
-            <li>The right to know what personal data is processed by third-party advertising networks.</li>
-            <li>The right to request data deletion where applicable.</li>
-        </ul>
+    <h2>7. Changes to This Privacy Policy</h2>
+    <p>We may update our Privacy Policy periodically to reflect changes in our practices or applicable legal regulations. We encourage you to review this page periodically. Any modifications will be posted here with an updated "Last Updated" date.</p>
 
-        <h2>7. Changes to This Privacy Policy</h2>
-        <p>We may update our Privacy Policy periodically to reflect changes in our practices or applicable legal regulations. We encourage you to review this page periodically. Any modifications will be posted here with an updated "Last Updated" date.</p>
+    <h2>8. Contact Us & Developer Information</h2>
+    <p>If you have any questions, feedback, or grievance requests regarding this Privacy Policy or your data rights, please contact the developer team:</p>
 
-        <h2>8. Contact Us</h2>
-        <p>If you have any questions, suggestions, or concerns regarding this Privacy Policy or our app practices, please contact us at:</p>
-        <div class="permission-card">
-            <p style="margin: 0;"><strong>Developer Support Email:</strong> <a href="mailto:aidevgen@gmail.com">aidevgen@gmail.com</a></p>
-            <p style="margin: 4px 0 0 0; font-size: 13px; color: var(--text-muted);">(Please replace with your active Google Play Console developer support email address)</p>
-        </div>
+    <div class="meta-box" style="margin-top: 15px;">
+        <p><strong>Developer:</strong> DevGen Ai Inc</p>
+        <p><strong>Application:</strong> Phone Cleaner: Storage & Junk Cleaner</p>
+        <p><strong>Package Name:</strong> com.phonecleaner.storagecleaner.junkcleaner</p>
+        <p><strong>Contact Email:</strong> <a href="mailto:support@kmsteams.com">support@kmsteams.com</a></p>
+        <p><strong>Support Response:</strong> Within 24–48 business hours</p>
     </div>
 
     <div class="footer">
-        &copy; 2026 Phone Cleaner. All rights reserved.
+        &copy; 2026 DevGen Ai Inc. All rights reserved.
     </div>
 </div>
 
